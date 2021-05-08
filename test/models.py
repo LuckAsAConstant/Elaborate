@@ -20,7 +20,7 @@ class City(models.Model):
 class Central(models.Model):
     name = models.CharField(max_length=30)
     location = models.CharField(max_length=30)
-    idCity = models.ForeignKey(Region, on_delete=models.CASCADE)
+    idCity = models.ForeignKey(City, on_delete=models.CASCADE)
 
 class Line(models.Model):
     name = models.CharField(max_length=30)
@@ -28,6 +28,7 @@ class Line(models.Model):
     end = models.FloatField()
     nameCabinet = models.CharField(max_length=30)
     placeCabinet = models.CharField(max_length=30)
+    idCentral = models.ForeignKey(Central, on_delete=models.CASCADE)
     
     
 class trellis(models.Model):
