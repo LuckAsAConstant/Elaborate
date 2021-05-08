@@ -33,7 +33,6 @@ class Line(models.Model):
 class trellis(models.Model):
     active = models.BooleanField()
     name = models.CharField(max_length=30)
-    
     longitude = models.FloatField()
     latitude = models.FloatField()
     idLine = models.ForeignKey(Line, on_delete=models.CASCADE)
