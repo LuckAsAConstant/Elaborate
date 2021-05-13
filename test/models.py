@@ -32,8 +32,10 @@ class Central(models.Model):
 
 class Line(models.Model):
     name = models.CharField(max_length=30)
-    begin = models.FloatField()
-    end = models.FloatField()
+    beginLongitude = models.FloatField()
+    beginLatitude = models.FloatField()
+    endLongitude = models.FloatField()
+    endLatitude = models.FloatField()
     nameCabinet = models.CharField(max_length=30)
     placeCabinet = models.CharField(max_length=30)
     idCentral = models.ForeignKey(Central, on_delete=models.CASCADE)
