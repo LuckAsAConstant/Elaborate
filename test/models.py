@@ -37,6 +37,7 @@ class Line(models.Model):
     nameCabinet = models.CharField(max_length=30)
     placeCabinet = models.CharField(max_length=30)
     idCentral = models.ForeignKey(Central, on_delete=models.CASCADE)
+    active = models.BooleanField()
 
     # def __str__(self):
     #     return '%s %f %f %s %s' % (self.name, self.begin, self.end, self.nameCabinet, self.placeCabinet)
