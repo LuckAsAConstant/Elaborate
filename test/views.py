@@ -3,18 +3,14 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the test index.")
+    return render(request, 'test/Index.html',{})
 
-def details(request):
-    # x = 5
-    output = "<h1>Hello world, you're the details view:<h1>"
-    return HttpResponse(output)
-
+def details(request):    
+    return render(request, 'test/Details.html',{})
+    
 def login(request):
-
-    return HttpResponse("Login view")
+    return render(request, 'test/Login.html',{})
 
 def register(request):
-    
-    return HttpResponse("Register")
+    return render(request, 'test/Register.html',{})
 # Create your views here.

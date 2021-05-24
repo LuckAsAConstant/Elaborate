@@ -1,0 +1,111 @@
+/* body {
+    font: 14px 'Open Sans', sans-serif;
+    padding: 20px;
+} */
+
+html,body {
+    margin: 0;
+    color: #333;
+}
+
+input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 6px;
+    display: block;
+	margin-bottom: 5px;
+    width: 90%;
+}
+
+button {
+    background-color: #64B5F6;
+    color: white;
+    padding: 6px 15px;
+    cursor: pointer;
+    border: 2px solid #2196F3;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button a {
+    color: white;
+}
+
+button:hover {
+    background-color: #2196F3;
+    border-color: #64B5F6;
+}
+
+.message {
+    border-radius: 10px;
+    width: 300px;
+    margin: 30px auto;
+}
+
+.success, .warning, .error {
+    font-size: 0.9em;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.success {  
+    background-color: #1DE9B6;
+    border: 2px solid #00BFA5;
+}
+
+.warning {
+    background-color: #F9A825;
+    border: 2px solid #F57F17;
+}
+
+.error {
+    background-color: #EF9A9A;
+    border: 2px solid red;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+input[type="text"] {
+    margin-bottom: 3px !important;
+}
+
+.form {
+
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+#register {
+    height: 190px;
+}
+
+
+body{
+    padding-top: 70px;
+}
+
+.navbar-brand,
+.navbar-nav > li > a{
+    height: 70px;
+    line-height: 40px;
+}
+
+.paragraph{
+    height: 50px;
+    color:rgb(0, 0, 0);
+    font: Georgia;
+    font-size: 15pt;
+    text-decoration:blink;
+    text-shadow:3px 3px 7px rgb(0, 0, 0);
+}
+
+.position{
+    position: static;
+    border: 3px solid #2d41b4;
+}
+
