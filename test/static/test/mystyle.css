@@ -5,7 +5,8 @@
 
 html,body {
     margin: 0;
-    color: #333;
+    color: rgb(247, 223, 223);
+    padding-top:0
 }
 
 input {
@@ -94,7 +95,9 @@ body{
     height: 70px;
     line-height: 40px;
 }
-
+.nav-item{
+    height: fit-content;
+}
 .paragraph{
     height: 50px;
     color:rgb(0, 0, 0);
@@ -109,3 +112,33 @@ body{
     border: 3px solid #2d41b4;
 }
 
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+
+/* .carousel-inner > .item > img {
+    width:100%; Or try to use important
+    height:auto;
+}
+*/
+
+.carousel-item {
+
+}
+
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+/* https://stackoverflow.com/questions/52560415/how-to-resize-image-in-bootstrap-carousel */
