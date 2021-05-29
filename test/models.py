@@ -55,6 +55,9 @@ class Users(models.Model):
     Username = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
     Admin = models.BooleanField()
+    name = models.CharField(max_length=30)
+    surname = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
     # def __str__(self):
     #     return '%s %s %f %f' % (self.active, self.name, self.longitude, self.latitude)    
 
