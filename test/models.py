@@ -52,7 +52,7 @@ class Trellis(models.Model):
     idLine = models.ForeignKey(Line, on_delete=models.CASCADE)
 
 class Users(models.Model):
-    Username = models.CharField(max_length=30)
+    username = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
     Admin = models.BooleanField()
     name = models.CharField(max_length=30)

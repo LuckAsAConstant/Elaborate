@@ -1,16 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
+from django.contrib.auth import logout
+from django.contrib.auth.forms import UserCreationForm
 
 def index(request):
     return render(request, 'test/Index.html',{})
 
 def details(request):    
     return render(request, 'test/Details.html',{})
-    
+
 def login(request):
     return render(request, 'test/Login.html',{})
 
 def register(request):
-    return render(request, 'test/Register.html',{})
+    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    
+    context = {'form':form}
+    return render(request, 'test/Register.html', context)
+
+def logout_view(request):
+    logout(request)
+    
 # Create your views here.
