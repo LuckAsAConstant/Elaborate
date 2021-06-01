@@ -7,7 +7,6 @@ class Region(models.Model):
 
 class Central(models.Model):
     name = models.CharField(max_length=30)
-    location = models.CharField(max_length=30)
     idRegion = models.ForeignKey(Region, on_delete=models.CASCADE)
     longitude = models.FloatField()
     latitude = models.FloatField()
@@ -51,13 +50,13 @@ class Trellis(models.Model):
     latitude = models.FloatField()
     idLine = models.ForeignKey(Line, on_delete=models.CASCADE)
 
-class Users(models.Model):
-    username = models.CharField(max_length=30)
-    password = models.CharField(max_length=30)
-    Admin = models.BooleanField()
-    name = models.CharField(max_length=30)
-    surname = models.CharField(max_length=30)
-    email = models.CharField(max_length=30)
+# class Users(models.Model):
+#     username = models.CharField(max_length=30)
+#     password = models.CharField(max_length=30)
+#     Admin = models.BooleanField()
+#     name = models.CharField(max_length=30)
+#     surname = models.CharField(max_length=30)
+#     email = models.CharField(max_length=30)
     # def __str__(self):
     #     return '%s %s %f %f' % (self.active, self.name, self.longitude, self.latitude)    
 
