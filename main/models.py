@@ -26,6 +26,8 @@ class Accumulation(models.Model):
 class Cabinet(models.Model):
     typeCabinet = models.CharField(max_length=30)
     Status = models.BooleanField()
+    Longitude = models.FloatField()
+    Latitude = models.FloatField()
     idAccumulations = models.ForeignKey(Accumulation, on_delete=models.CASCADE)
 
 
@@ -35,9 +37,7 @@ class Line(models.Model):
     beginLatitude = models.FloatField()
     endLongitude = models.FloatField()
     endLatitude = models.FloatField()
-    nameCabinet = models.CharField(max_length=30)
     status = models.BooleanField()
-    placeCabinet = models.CharField(max_length=30)
     idCentral = models.ForeignKey(Central, on_delete=models.CASCADE)
     idCabinet = models.ForeignKey(Cabinet, on_delete=models.CASCADE)
     idAccumulation = models.ForeignKey(Accumulation, on_delete=models.CASCADE)
