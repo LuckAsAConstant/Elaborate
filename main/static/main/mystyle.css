@@ -4,6 +4,7 @@ body {
 
 .card {
     /* Add shadows to create the "card" effect */
+    /* position: relative; */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     background-color: #161b22;
@@ -24,4 +25,12 @@ body {
     padding-top: .5rem;
     padding-bottom: .9rem;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}       
+
+
 /* https://stackoverflow.com/questions/52560415/hols
