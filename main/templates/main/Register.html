@@ -9,19 +9,22 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{% static 'main/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'main/mystyle.css' %}">
+    
+    <style>
+      input {
+        width: 100%;
+      }
+    </style>
 </head>
-<body class="text-center" style="padding-top:0">
+<body class="text-center paragraph" style="padding-top:5">
 
   {% include "components/navbar.html" %}
-
-  <div class="card carousel slide container px-4 py-5">
-    <form method="POST" action="">
-      {% csrf_token %}`
-      {{form.as_p}}
-      <input type="submit" name="Create User">    
-    </form>
-  </div>
-
+  {% include "components/registrationForm.html" %}
+  <!-- <form action="" method="POST">
+  {% csrf_token %}
+  {{from.as_p}}
+  <input type="submit" name="create user">
+</form> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
 </body>

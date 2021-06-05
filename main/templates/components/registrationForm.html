@@ -1,0 +1,66 @@
+<form class="row g-3 needs-validation container px-4 py-5 card mx-auto" method="POST" action="" novalidate>
+  {% csrf_token %}
+  <div class="mx-auto">
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">{{form.name.label}}</label>
+        {{form.name}}
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">{{form.surname.label}}</label>
+        {{form.surname}}
+      
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">{{form.username.label}}</label>
+      <div class="input-group has-validation">
+        <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+          {{form.username}}
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">{{form.email.label}}</label>
+          {{form.email}}
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">{{form.password1.label}}</label>
+          {{form.password1}}
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">{{form.password2.label}}</label>
+            {{form.password2}}    
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+  </div>  
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+        <label class="form-check-label" for="invalidCheck">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <input type="submit" name="insert">
+    </div>
+  </form>
