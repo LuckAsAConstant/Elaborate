@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.contrib.auth import logout
+from django.contrib import messages
+from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 
 from .forms import CreateUserForm
+from .models import *
 
 def index(request):
     return render(request, 'main/Index.html',{})
@@ -20,6 +22,9 @@ def login(request):
 
         if user is not None:
             login(request, user)
+            redirect('index')
+        else:
+            messages.info(request, 'username or password is incorrect')
 
     return render(request, 'main/Login.html',{})
 
@@ -30,10 +35,13 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
+
+
     context = {'form':form}
     return render(request, 'main/Register.html', context)
 
-def logout_view(request):
+def logout(request):
     logout(request)
+    return redirect('login')
     
 # Create your views here.
