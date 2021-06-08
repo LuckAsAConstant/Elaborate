@@ -3,9 +3,11 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import UserCreationForm
+# from django.contrib.auth.models import User
 
 from .forms import CreateUserForm
 from .models import *
+
 
 def index(request):
     return render(request, 'main/Index.html',{})
@@ -13,7 +15,7 @@ def index(request):
 def details(request):    
     return render(request, 'main/Details.html',{})
 
-def login(request):
+def login_page(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
