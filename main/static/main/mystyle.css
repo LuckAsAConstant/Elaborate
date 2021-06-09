@@ -12,6 +12,13 @@ body {
     border-radius: 6px;
 }
 
+.card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #161b22;
+  }
+
 .paragraph{
     color: #bdc4cd
 }
@@ -32,5 +39,8 @@ body {
     margin-right: auto;
 }       
 
+th > td {
+    color: #bdc4cd
+}
 
 /* https://stackoverflow.com/questions/52560415/hols
