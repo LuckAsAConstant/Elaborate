@@ -1,7 +1,7 @@
 {% load static %}
-<table class="table table-striped container px-4 py-5 card1">
+<table class="table container px-4 py-5 card1" style="color: white !important">
   <thead>
-    <tr>
+    <tr>   
       <th scope="col">#</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
@@ -9,20 +9,23 @@
     </tr>
   </thead>
   <tbody>
+    {% for central in centrals %}
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+        <td>{{central.name}}</th>   
+      <!-- <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th> -->
     </tr>
+    {% endfor %}
     <tr>
-      <th scope="row">2</th>
+      <!-- <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
-      <td>@fat</td>
+      <td>@fat</td> -->
     </tr>
     <tr>
-      <th scope="row">3</th>
+     <th scope="row">3</th>
       <td>Larry</td>
       <td>the Bird</td>
       <td>@twitter</td>

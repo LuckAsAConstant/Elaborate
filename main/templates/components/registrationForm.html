@@ -1,9 +1,7 @@
-
-
 <form class="row g-3 needs-validation " method="POST" action="" novalidate>
   {% csrf_token %}
   <div class="mx-auto">
-    <div class="col-md-4">
+    <div class="mx-auto" style="width: 600px">
       <label for="validationCustom01" class="form-label">{{form.name.label}}</label>
         {{form.name}}
       <div class="valid-feedback">
@@ -11,7 +9,7 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="mx-auto" style="width: 600px">
       <label for="validationCustom02" class="form-label">{{form.surname.label}}</label>
         {{form.surname}}
       
@@ -19,7 +17,7 @@
         Looks good!
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="mx-auto" style="width: 600px">
       <label for="validationCustomUsername" class="form-label">{{form.username.label}}</label>
       <div class="input-group has-validation">
         <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
@@ -29,21 +27,21 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="mx-auto" style="width: 600px">
         <label for="validationCustom02" class="form-label">{{form.email.label}}</label>
           {{form.email}}
         <div class="valid-feedback">
           Looks good!
         </div>
       </div>
-    <div class="col-md-4">
+    <div class="mx-auto" style="width: 600px">
         <label for="validationCustom02" class="form-label">{{form.password1.label}}</label>
           {{form.password1}}
         <div class="valid-feedback">
             Looks good!
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="mx-auto" style="width: 600px">
         <label for="validationCustom02" class="form-label">{{form.password2.label}}</label>
             {{form.password2}}    
         <div class="valid-feedback">

@@ -12,8 +12,10 @@ from .models import *
 def index(request):
     return render(request, 'main/Index.html',{})
 
-def details(request):    
-    return render(request, 'main/Details.html',{})
+def details(request):
+    centrals = Central.objects.all()
+    context = {'centrals': centrals}    
+    return render(request, 'main/Details.html', context)
 
 def login_page(request):
     if request.method == 'POST':

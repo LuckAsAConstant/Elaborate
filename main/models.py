@@ -10,7 +10,7 @@ class Central(models.Model):
     longitude = models.FloatField()
     latitude = models.FloatField()
     typeCentral = models.CharField(max_length=30)
-    idRegion = models.ForeignKey(Region, on_delete=models.CASCADE)
+    idRegion = models.ForeignKey(Region, on_delete=models.CASCADE)   
     # def __str__(self):
     #     return '%s %s' % (self.name, self.location)
 

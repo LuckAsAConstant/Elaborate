@@ -1,5 +1,5 @@
 
-    <main class="form-signin card container px-4 py-5">
+    <main class="form-signin card container px-4 py-5" style="position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); left: 50%;">
       <form method="POST" action="">
         {% csrf_token %}
   
@@ -9,7 +9,7 @@
           <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
           <label for="floatingInput">Username</label>
         </div>
-        <div class="form-floating">
+        <div class="form-floating" style="margin-top: 4px">
           <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
           <label for="floatingPassword">Password</label>
         </div>

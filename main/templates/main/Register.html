@@ -22,7 +22,9 @@
 <body class="text-center paragraph" style="padding-top:0">
 
   {% include "components/navbar.html" %}
-  {% include "components/registrationForm.html" %}
+  <div style="margin-left: auto; margin-right: auto">
+    {% include "components/registrationForm.html" %}
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
