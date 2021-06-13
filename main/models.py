@@ -41,6 +41,8 @@ class Line(models.Model):
     idCentral = models.ForeignKey(Central, on_delete=models.CASCADE)
     idCabinet = models.ForeignKey(Cabinet, on_delete=models.CASCADE)
     idAccumulation = models.ForeignKey(Accumulation, on_delete=models.CASCADE)
+    # def __str__(self):
+    #     return self.idCentral
     
 
     

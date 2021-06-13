@@ -1,67 +1,23 @@
-<form class="row g-3 needs-validation " method="POST" action="" novalidate>
-  {% csrf_token %}
-  <div class="mx-auto">
-    <div class="mx-auto" style="width: 600px">
-      <label for="validationCustom01" class="form-label">{{form.name.label}}</label>
-        {{form.name}}
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
+{% load crispy_forms_tags %}
 
-    <div class="mx-auto" style="width: 600px">
-      <label for="validationCustom02" class="form-label">{{form.surname.label}}</label>
-        {{form.surname}}
-      
-      <div class="valid-feedback">
-        Looks good!
-      </div>
+<main class="form-signin card container px-4 py-2" style="position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); left: 50%;">
+  <form method="POST" action="">
+    {% csrf_token %}
+
+    <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+    {{form|crispy}}
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> I accept the terms and conditions
+      </label>
     </div>
-    <div class="mx-auto" style="width: 600px">
-      <label for="validationCustomUsername" class="form-label">{{form.username.label}}</label>
-      <div class="input-group has-validation">
-        <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
-          {{form.username}}
-        <div class="invalid-feedback">
-          Please choose a username.
-        </div>
-      </div>
-    </div>
-    <div class="mx-auto" style="width: 600px">
-        <label for="validationCustom02" class="form-label">{{form.email.label}}</label>
-          {{form.email}}
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-    <div class="mx-auto" style="width: 600px">
-        <label for="validationCustom02" class="form-label">{{form.password1.label}}</label>
-          {{form.password1}}
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div>
-    <div class="mx-auto" style="width: 600px">
-        <label for="validationCustom02" class="form-label">{{form.password2.label}}</label>
-            {{form.password2}}    
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div>
-  </div>  
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-          Agree to terms and conditions
-        </label>
-        <div class="invalid-feedback">
-          You must agree before submitting.
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <input type="submit" name="insert">
-    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    Already have an account? <a href="{% url 'login' %}">Sign in</a>
+
+    <p class="mt-5 mb-3 text-muted">© 2020–2021</p>
   </form>
-{{form.errors}}
+
+  {% for message in messages %}
+    <p id="messages">{{message}}</p>
+  {% endfor %}  
+</main>

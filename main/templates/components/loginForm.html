@@ -1,29 +1,31 @@
+<main class="form-signin card container px-4 py-2" style="position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); left: 50%;">
+  <form method="POST" action="">
+    {% csrf_token %}
 
-    <main class="form-signin card container px-4 py-5" style="position: absolute; top: 50%; transform: translateY(-50%) translateX(-50%); left: 50%;">
-      <form method="POST" action="">
-        {% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Please Sign in</h1>
+    
+
+<div id="div_id_username" class="form-group"> 
+  <label for="id_username" class=" requiredField">
+    Username<span class="asteriskField">*</span> 
+  </label> <div class=""> 
+    <input type="text" name="username" maxlength="150" autofocus="" class="textinput textInput form-control" required="" id="id_username"> 
+    <small id="hint_id_username" class="form-text text-muted"></small> 
+  </div> <div id="div_id_name" class="form-group"> <label for="id_name" class=" requiredField">
   
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    
-        <div class="form-floating">
-          <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
-          <label for="floatingInput">Username</label>
-        </div>
-        <div class="form-floating" style="margin-top: 4px">
-          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
-        </div>
-    
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">© 2020–2021</p>
-      </form>
+  Password<span class="asteriskField">*</span> 
+</label> <div class=""> <input type="password" name="password" class="textinput textInput form-control" required="" id="id_password"> 
+  <small id="hint_id_password" class="form-text text-muted"></small> 
 
-      {% for message in messages %}
-        <p id="messages">{{message}}</p>
-      {% endfor %}  
-    </main>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    No account? <a href="{% url 'register' %}">Register</a>
+    <p class="mt-5 mb-3 text-muted">© 2020–2021</p>
+  </form>
+
+    
+</main>
