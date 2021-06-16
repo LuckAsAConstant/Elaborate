@@ -16,18 +16,18 @@
           <li class="nav-item">
             <a class="nav-link" style="padding-top: 13px;" href="/admin/">Administration</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" style="padding-top: 13px;" href="{% url 'register' %}">Register</a>
-          </li>
+          </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" style="padding-top: 13px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Details
             </a>
             <ul class="dropdown-menu" style="padding-top: 13px;" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="{% url 'lines' %}">lines</a></li>
+              <li><a class="dropdown-item" href="{% url 'pylons' %}">pylons</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="{% url 'cabinets' %}">cabinets</a></li>
             </ul>
           </li>
         </ul>
@@ -35,7 +35,10 @@
     </div>
   </nav>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script type="text/css" src="{% static 'main/js/bootstrap.min.js' %}"></script>
 </body>
 </html>

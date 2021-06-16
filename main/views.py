@@ -12,8 +12,32 @@ from .models import *
 def index(request):
     return render(request, 'main/Index.html',{})
 
-def details(request):    
-    return render(request, 'main/Details.html',{})
+def details_Lines(request):
+    lines = Line.objects.order_by('-idCentral')
+    # centrals = Central.objects.all()
+    context = {
+        # 'centrals': centrals, 
+        'lines': lines
+    }    
+    return render(request, 'main/DetailsLines.html', context)
+
+def details_Cabinets(request):
+    cabinets = Cabinet.objects.order_by('-idAccumulations')
+    # centrals = Central.objects.all()
+    context = {
+        # 'centrals': centrals, 
+        'cabinets': cabinets
+    }    
+    return render(request, 'main/DetailsCabinets.html', context)
+
+def details_Pylons(request):
+    pylons = Pylon.objects.order_by('-idLine')
+    # centrals = Central.objects.all()
+    context = {
+        # 'centrals': centrals, 
+        'pylons': pylons
+    }    
+    return render(request, 'main/DetailsPylons.html', context)
 
 def login_page(request):
     if request.method == 'POST':
