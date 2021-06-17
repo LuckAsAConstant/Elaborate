@@ -52,7 +52,7 @@ def login_page(request):
 
         if user is not None:
             login(request, user)
-            redirect('index')
+            redirect('/main/index')
         else:
             messages.info(request, 'username or password is incorrect')
 
